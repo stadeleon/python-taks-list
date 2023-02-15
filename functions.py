@@ -16,6 +16,6 @@ def write_todos(todos_list, filepath=FILEPATH):
     with open(filepath, 'w') as file:
         file.writelines(todos_list)
 
-# print(__name__)
-# if __name__ == "__main__":
-#     print("Hello from functions")
+print(__name__)
+if __name__ == "__main__":
+    print(get_todos())
