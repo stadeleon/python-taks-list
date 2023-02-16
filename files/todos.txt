@@ -1,6 +1,7 @@
 two
 four
 new value
-record
+record222
 recheck all data
 go to sleep
+GUI to-do
