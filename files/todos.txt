@@ -1,7 +1,6 @@
 two
-four
-new value
-record222
 recheck all data
 go to sleep
 GUI to-do
+New task
+Another Task
