@@ -1,0 +1,3 @@
+([('gui-todo-list',
+   '/Users/leonid.derevianko/Projects/Python/Learning/dist/gui-todo-list',
+   'EXECUTABLE')],)
