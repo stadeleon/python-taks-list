@@ -1,8 +1,6 @@
 import functions
 import PySimpleGUI as sg
 import time
-import os
-
 
 def change_buttons_status(buttons, status='active'):
     status = not (status == 'active')
@@ -12,20 +10,18 @@ def change_buttons_status(buttons, status='active'):
 
 sg.theme("DarkBlue2")
 
-if not os.path.exists('files'):
-    os.makedirs('files')
-if not os.path.exists('files/todos.txt'):
-    with open('files/todos.txt', 'w') as file:
-        pass
-
 clock = sg.Text(time.strftime('%b %d, %Y %H:%M:%S'), key='clock')
 label = sg.Text("Type in a to-do")
 input_box = sg.InputText(tooltip="Enter todo", key='todo', enable_events=True)
 
-add_button = sg.Button("Add", disabled=True, disabled_button_color='gray')
-edit_button = sg.Button("Edit", disabled=True, disabled_button_color='gray')
-complete_button = sg.Button("Complete", disabled=True, disabled_button_color='gray')
-exit_button = sg.Button("Exit")
+add_button = sg.Button(key="Add", image_source='images/add.png',
+                       disabled=True,
+                       mouseover_colors=('LightBlue2', 'green'), tooltip='Add to do')
+edit_button = sg.Button("Edit", disabled=True, mouseover_colors=('LightBlue2', 'green'))
+complete_button = sg.Button(key="Complete", image_source='images/complete.png',
+                            disabled=True, disabled_button_color='gray',
+                            mouseover_colors=('LightBlue2', 'green'), tooltip='Complete to do')
+exit_button = sg.Button("Exit", mouseover_colors=('LightBlue2'))
 
 status = sg.Text('', key='status')
 

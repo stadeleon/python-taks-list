@@ -1,5 +1,5 @@
 import PySimpleGUI as sg
-from zip_creator import compress
+from zip_processor import compress
 
 source_label = sg.Text('Select files to compress')
 source_input = sg.Input(tooltip='enter path here')

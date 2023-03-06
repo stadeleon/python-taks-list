@@ -21,6 +21,9 @@ while True:
         case sg.WINDOW_CLOSED:
             break
         case 'Convert':
-            meeters = convert(float(value['feet']), float(value['inches']))
-            window['result'].update(value=f"{meeters} m")
+            try:
+                meeters = convert(float(value['feet']), float(value['inches']))
+                window['result'].update(value=f"{meeters} m")
+            except ValueError:
+                sg.popup_no_buttons('Fill the fields', auto_close=True, auto_close_duration=3, no_titlebar=True)
 window.close()
